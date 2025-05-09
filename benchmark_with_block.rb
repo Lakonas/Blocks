@@ -1,5 +1,15 @@
 def benchmark
-  # Your benchmarking code goes here.
+    # Capture the start time
+    start_time = Time.now
+
+    # Yield to the block (i.e., run the code inside the block)
+    yield
+  
+    # Capture the end time after block has run
+    end_time = Time.now
+  
+    # Return the difference (duration) in seconds
+    end_time - start_time
 end
  
 # Be careful, pasting this into IRB will take a long time to print.
